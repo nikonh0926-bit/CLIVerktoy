@@ -1,0 +1,88 @@
+I denne oppgaven skal dere gjenskape funksjonaliteten til kjente CLI-verktøy som vi ofte bruker i Git Bash og andre terminaler.
+
+Målet er å lære hvordan slike verktøy fungerer “under panseret”, og samtidig få trening i å strukturere kode på en gjenbrukbar måte.
+Oppgavebeskrivelse
+
+Dere skal implementere minst 6 av følgende kommandoer (dere kan velge selv hvilke):
+
+    ls – list ut alle filer og mapper i arbeidskatalogen
+
+    cat – skriv ut innholdet i en fil
+
+    echo – skriv ut tekst til terminalen
+
+    pwd – vis hvilken katalog man befinner seg i
+
+    head – vis et gitt antall linjer fra starten av en fil
+
+    tail – vis et gitt antall linjer fra slutten av en fil
+
+    wc – tell antall ord, linjer, tegn og bytes i en fil
+
+    touch – opprett en ny fil
+
+    cp – kopier en fil til et nytt navn eller sted
+
+    mv – flytt eller gi nytt navn til en fil
+
+    rm – slett en fil
+
+Tips: Start med de enkleste (for eksempel echo, pwd, cat, ls), og bygg gradvis opp til mer avanserte.
+
+Her kan det også være greit å vite om dette arrayet vi kan ta inn i Main:
+
+
+public static class Program()
+
+{
+
+    public static void Main(string[] args)
+
+    {
+
+
+
+    }
+
+}
+
+Dette er et sett med argumenter som kan hentes inn etter en call til dotnet run i.e. dotnet run --echo 
+
+Dette er selfølgelig en måte å gjøre dette på. En annen kan være å lage et mer standardisert program. 
+Arbeidsmåte
+
+    Planlegging først
+
+        Lag en grovplan for hvordan dere vil bygge verktøyet.
+
+        Skal alt ligge i ett prosjekt, eller er det bedre å lage flere små?
+
+        Hvordan kan dere gjøre koden mest mulig gjenbrukbar (for eksempel gjennom moduler eller namespaces)?
+
+    Utforsk dokumentasjon
+
+        Søk gjerne i Microsoft Learn etter relevante namespaces og metoder som kan hjelpe dere (f.eks. System.IO for filoperasjoner, System.Environment for arbeidskatalog).
+
+    Ekstraargumenter
+
+        Mange av disse verktøyene har støtte for argumenter (for eksempel head -n 5 file.txt).
+
+        Tenk gjennom hvordan dere kunne implementert og tolket slike argumenter i deres løsning.
+
+Refleksjon underveis
+
+    Hva er likhetene og forskjellene mellom de ulike verktøyene?
+
+    Hvilke deler av koden kunne dere gjenbrukt på tvers?
+
+    Hvorfor tror dere disse verktøyene fortsatt er så mye brukt i utvikling, til tross for at vi har moderne IDE-er og GUI-er?
+
+Innlevering
+
+Lever en GitHub-repo-lenke med:
+
+    Implementasjonen av minst 6 kommandoer
+
+    En enkel README som forklarer hvilke verktøy dere har laget, og hvordan de kan kjøres
+
+    Eventuelt korte notater om hva dere ville gjort videre (f.eks. støtte for flere argumenter)
