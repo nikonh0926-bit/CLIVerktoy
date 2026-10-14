@@ -3,6 +3,7 @@ public static class Program
 {
     public static void Main(string[] args)
     {
+        // sjekker om programmet ble startet med kommando-linje argumenter
         if(args.Length > 0)
         {
             Menu.RunSelectedMethod(args[0], args);
@@ -10,13 +11,18 @@ public static class Program
         else
         {
             string mode = Menu.GetSelectionFromMenu("Guided mode?");
-            while(mode == "yes")
+
+            // start den interactive guidede menyen
+            if (mode == "yes")
             {
-                Menu.GetSelectionFromMenu();
+                while(true)
+                    Menu.GetSelectionFromMenu();
             }
-            while(mode == "no")
+            // start program for tekstkommandoer
+            if(mode == "no")
             {
-                Menu.ManualMode();
+                while(true)
+                    Menu.ManualMode();
             }
         }
     }
